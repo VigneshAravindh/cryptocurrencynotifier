@@ -1,0 +1,56 @@
+Boxlayoutexample:
+
+<Boxlayoutexample>:
+    orientation:"vertical"
+    Label:
+        text:"STEP 1 : Get your telegram chat id using Chat ID bot and crypto bot using the below link \n STEP 2 : Select the choice of the cryptocurrency you need \n Enter 0 for BTC-bitcoin \n Enter 1 for ETH-Ethereum \n Enter 2 for USDT-Tevther"
+        size:self.texture_size
+        size_hint:
+        text_size:self.size
+        halign:'left'
+
+        pos_text:20,20
+    Button:
+        text:"Click here for the cryptobot"
+        on_release:root.openweb()
+
+    TextInput:
+        text:"Enter your chat id here"
+        width:"40dp"
+        multiline:False
+        on_text_validate:root.update_chatid(self)
+        size:"20dp","20dp"
+    TextInput:
+        text:"Enter your choice"
+
+        width:"40dp"
+        multiline:False
+        on_text_validate:root.update_choice(self)
+        size:"20dp","20dp"
+    TextInput:
+        text:"Enter your Threshold value here"
+
+        width:"40dp"
+        multiline:False
+        on_text_validate:root.update_threshold(self)
+        size:"20dp","20dp"
+    ToggleButton:
+        text:"OFF"
+        on_state:root.on_toggle_button(self)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
